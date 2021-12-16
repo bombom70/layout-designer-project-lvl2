@@ -1,0 +1,61 @@
+$f-size-11px: 11px;
+$f-size-14px: 14px;
+$f-size-16px: 16px;
+$f-size-18px: 18px;
+$f-size-30px: 30px;
+$f-size-38px: 38px;
+$f-size-60px: 60px;
+$f-height-16px: 16px;
+$f-height-24px: 24px;
+$f-height-25px: 25px;
+$f-height-45px: 45px;
+$f-height-57px: 57px;
+$f-height-90px: 90px;
+$w-color: #FFFFFF;
+$width-content: 1200px;
+$f-weight-normal: normal;
+$f-weight-bold: bold;
+$f-arial: Arial;
+
+@mixin desctopH1 {
+    font-size: $f-size-60px;
+    line-height: $f-height-90px;
+    font-weight: $f-weight-bold;
+    text-transform: uppercase;
+}
+
+@mixin desctopH2 {
+    font-size: $f-size-38px;
+    line-height: $f-height-57px;
+    font-weight: $f-weight-bold;
+    text-transform: uppercase;
+}
+
+
+@mixin mobileH1 {
+    font-size: $f-size-30px;
+    line-height: $f-height-45px;
+    $f-weight-bold: bold;
+    text-transform: uppercase;
+}
+
+@mixin mobileH2 {
+    font-size: $f-size-18px;
+    line-height: $f-height-25px;
+    $f-weight-bold: bold;
+    text-transform: uppercase;
+}
+
+@mixin text-format($f-size, $l-height, $white, $f-weight, $f-family: $roboto, $uppercase: true) {
+    font-family: $f-family;
+    font-style: normal;
+    font-weight: $f-weight;
+    font-size: $f-size;
+    line-height: $l-height;
+
+    @if ($uppercase) {
+        text-transform: uppercase;
+    }
+
+    color: $w-color;
+}

@@ -1,0 +1,83 @@
+@import './variables.scss';
+@import './general.scss';
+@import './header.scss';
+@import './section1.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    color: $w-color;
+}
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.a-items-center {
+    align-items: center;
+}
+
+.bg-banner {
+    height: 750px;
+
+    background-image: url('../images/banner.png');
+    background-position: center;
+    background-size: cover;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.dflex {
+    display: flex;
+}
+.flex-grow1 {
+    flex-grow: 1;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 414px) {
+    .container {
+        display: block;
+        padding: 20px;
+    }
+    .header {
+        line-height: 13px;
+        nav {
+            margin: 10px 0 10px 0;
+        }
+        ul {
+            display: block;
+        }
+        .d-block{
+            display: block;
+        }
+        input {
+            width: 95%;
+        }
+    }
+    .container-section {
+        h1 {
+            text-align: center;
+            @include mobileH1;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 16px;
+            @include mobileH2;
+        }
+        span {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+        }
+    }
+}

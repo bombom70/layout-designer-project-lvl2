@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+main {
+    grid-column: span 12;
+    .container-section {
+        grid-column: 2 / span 10;
+        grid-row: 2 / span 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .span-12 {
+        grid-column: span 12;
+    }
+    .m-botom {
+        margin-bottom: 31px;
+    }
+    h1 {
+        @include text-format($f-size-60px, $f-height-90px, $w-color, $f-weight-bold);
+    }
+    h2 {
+        @include text-format($f-size-38px, $f-height-57px, $w-color, $f-weight-bold);
+    }
+    span {
+        @include text-format($f-size-16px, $f-height-24px, $w-color, $f-weight-normal, $uppercase: false);
+    }
+    .form {
+        margin-top: 17px;
+        max-width: 570px;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 570px;
+        justify-content: space-between;
+        gap: 1.5rem;
+        .input-form {
+            @include text-format($f-size-14px, $f-height-16px, $w-color, $f-weight-bold, $f-arial, $uppercase: false);
+            
+            min-width: 270px;
+            min-height: 50px;
+            padding: 16px 20px;
+            
+            border: 2px solid #CACACA;
+            box-sizing: border-box;
+            border-radius: 3px;
+            background: transparent;
+            &[type=text]::-webkit-input-placeholder {
+                color: $w-color;
+            }
+        }
+        .btn-form {
+            flex-grow: 1;
+            padding: 20px 30px;
+            text-transform: uppercase;
+            
+            background: #34C176;
+            border-radius: 5px;
+        }
+    }
+    .f-column {
+        flex-direction: column;
+    }
+}
