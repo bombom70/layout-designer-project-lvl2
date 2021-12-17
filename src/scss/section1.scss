@@ -1,4 +1,11 @@
 @import './variables.scss';
+.bg-banner {
+    height: 750px;
+
+    background-image: url('../images/banner.png');
+    background-position: center;
+    background-size: cover;
+}
 
 main {
     grid-column: span 12;
@@ -16,13 +23,13 @@ main {
         margin-bottom: 31px;
     }
     h1 {
-        @include text-format($f-size-60px, $f-height-90px, $w-color, $f-weight-bold);
+        @include desctopH1;
     }
     h2 {
-        @include text-format($f-size-38px, $f-height-57px, $w-color, $f-weight-bold);
+        @include desctopH2;
     }
     span {
-        @include text-format($f-size-16px, $f-height-24px, $w-color, $f-weight-normal, $uppercase: false);
+        @include desctopText;
     }
     .form {
         margin-top: 17px;
@@ -35,7 +42,7 @@ main {
         justify-content: space-between;
         gap: 1.5rem;
         .input-form {
-            @include text-format($f-size-14px, $f-height-16px, $w-color, $f-weight-bold, $f-arial, $uppercase: false);
+            @include desctopText; 
             
             min-width: 270px;
             min-height: 50px;
@@ -45,6 +52,7 @@ main {
             box-sizing: border-box;
             border-radius: 3px;
             background: transparent;
+            outline:none;
             &[type=text]::-webkit-input-placeholder {
                 color: $w-color;
             }

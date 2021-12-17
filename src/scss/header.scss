@@ -1,18 +1,10 @@
 @import './variables.scss';
 
 header {
-    * {
-        @include text-format($f-size-11px, $f-height-16px, $w-color, $f-weight-normal);
-    }
-
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: space-around;
-    .container {
-        width: $width-content;
-        padding: 0 10px;
-    }
     .logo {
         align-items: center;
         max-width: 98px;
@@ -46,6 +38,7 @@ header {
             color: $w-color;
         }
     }
+    @include desctopTextHeader;
     input {
         background: #3C3B3D;
         border-radius: 50px;
@@ -54,5 +47,6 @@ header {
         color: $w-color;
         text-transform: uppercase;
         min-width: 248px;
+        outline:none;
     }
 }

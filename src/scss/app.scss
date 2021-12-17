@@ -2,11 +2,18 @@
 @import './general.scss';
 @import './header.scss';
 @import './section1.scss';
+@import './pricing-section.scss';
 
 * {
     padding: 0;
     margin: 0;
     color: $w-color;
+}
+
+.container {
+    max-width: $width-content;
+    width: 100%;
+    padding: 0 10px;
 }
 
 .template-grid {
@@ -20,25 +27,21 @@
     align-items: center;
 }
 
-.bg-banner {
-    height: 750px;
-
-    background-image: url('../images/banner.png');
-    background-position: center;
-    background-size: cover;
-}
 .flex-end {
     justify-content: flex-end;
 }
 .dflex {
     display: flex;
 }
+
 .flex-grow1 {
     flex-grow: 1;
 }
+
 .justify-content-between {
     justify-content: space-between;
 }
+
 .flex-wrap {
     flex-wrap: wrap;
 }

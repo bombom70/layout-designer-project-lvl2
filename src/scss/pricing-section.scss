@@ -1,0 +1,117 @@
+@import './variables.scss';
+@import './general.scss';
+
+.bg-dark {
+    background: $dark-color;
+}
+.template-grid-pricing {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px repeat(3, 1fr);
+
+}
+
+.page-pricing {
+    grid-column: 2 / span 10;
+    grid-row: 2 /span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .f-d-row {
+        flex-direction: row;
+    }
+
+    .items {
+        height: 615px;
+        padding: 50px 100px;
+        gap: 50px;
+    }
+
+    .pricing-item {
+        height: 615px;
+        padding: 0 1.5rem;
+        flex: 0 0 370px;
+
+        border-radius: 1rem;
+    }
+
+    h3 {
+        @include desctopH3;
+
+        margin: 25px 0 200px 0;
+        text-align: center;
+    }
+    
+    .bg-sub1 {
+        background-image: url('../images/subscribe_1.png'); 
+        background-position: center;
+        background-size: cover;
+    }
+
+    .bg-sub2 {
+        background-image: url('../images/subscribe_2.png'); 
+        background-position: center;
+        background-size: cover;
+    }
+
+     .bg-sub3 {
+        background-image: url('../images/subscribe_3.png'); 
+        background-position: center;
+        background-size: cover; 
+    }
+    .pricing {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .pricing-value {
+        font-size: 64px;
+    }
+
+    .pricing-value-text {
+        padding: 10px;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+    }
+    .btn {
+        width: 330px;
+        height: 66px;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $f-size-16px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: Transparent;
+        margin: 40px 22px 60px 22px;
+
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    .pricing-footer {
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 150%;
+
+        margin: 0 30px;
+
+        text-align: center;
+    }
+
+    .text-footer {
+        width: 1200px;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+
+        text-align: center;
+    }
+}
