@@ -1,0 +1,46 @@
+@import './variables.scss';
+@import './general.scss';
+
+.news-item {
+    display: flex;
+
+    width: 100%;
+    .btn {
+        padding: 16px 30px;
+    }
+    h3 {
+        font-size: $f-size-30px;
+        line-height: $f-height-45px;
+    }
+    p {
+        font-family: $roboto;
+        font-size: $f-size-16px;
+        line-height: $f-height-24px;
+        font-style: normal;
+        $f-weight-bold: normal;
+        color: #CACACA;
+    }
+    span {
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 19px;
+        text-transform: uppercase;
+
+        color: #F89202;
+    }
+    .news-body {
+        p {
+            padding: 24px 0;
+        }
+    }
+    .news-footer {
+        .news-author {
+            gap: 16px;
+        }
+        .btn {
+            margin-top: 50px;
+        }
+    }
+}

@@ -22,12 +22,6 @@ main {
     .m-botom {
         margin-bottom: 31px;
     }
-    h1 {
-        @include desctopH1;
-    }
-    h2 {
-        @include desctopH2;
-    }
     span {
         @include desctopText;
     }

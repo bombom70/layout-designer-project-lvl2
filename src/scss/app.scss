@@ -3,6 +3,8 @@
 @import './header.scss';
 @import './section1.scss';
 @import './pricing-section.scss';
+@import './news-section.scss';
+@import './app-section.scss';
 
 * {
     padding: 0;
@@ -19,10 +21,45 @@
 .template-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
 }
+.template-grid-2-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+.container-app {
+    grid-column: 1 / span 2;
+    grid-row: 1 /span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    padding-top: 100px;
+}
+.col-2 {
+    grid-column: 1 / span 2;
+}
+.col-1 {
+    grid-column: 1 / span 1;
+}
+.row-1 {
+    grid-row: 1 / span 1;
+}
+.row-2 {
+    grid-row: 2 / span 2;
+}
+.grid-container {
+    grid-column: 2 / span 10;
+    grid-row: 1 /span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 100px;
+}
 .a-items-center {
     align-items: center;
 }
@@ -46,10 +83,49 @@
     flex-wrap: wrap;
 }
 
+h1 {
+    @include desctopH1;
+}
+h2 {
+    @include desctopH2;
+}
+h3 {
+    @include desctopH3;
+}
+
+.padding-50px-100px {
+    padding: 50px 100px;
+    gap: 50px;
+}
+.gap-50px {
+    gap: 50px;
+}
+.btn {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $f-size-16px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: Transparent;
+
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 @media (max-width: 414px) {
     .container {
         display: block;
-        padding: 20px;
+        padding: 19px;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    h3 {
+        font-size: $f-size-16px;
+        line-height: $f-height-24px;
     }
     .header {
         line-height: 13px;
@@ -81,6 +157,29 @@
         }
         input {
             width: 100%;
+        }
+    }
+    .page-pricing {
+        .pricing-item {
+            padding: 0;
+            margin: 0 1.5rem;
+        }
+        .text-footer {
+            width: 100%;
+        }
+    }
+    .padding-50px-100px {
+        padding: 50px 0;
+    }
+    .page-news {
+        width: 100%;
+        .news-item {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-mews {
+            width: 374px;
         }
     }
 }

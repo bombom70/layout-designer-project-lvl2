@@ -4,43 +4,24 @@
 .bg-dark {
     background: $dark-color;
 }
-.template-grid-pricing {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px repeat(3, 1fr);
-
-}
 
 .page-pricing {
-    grid-column: 2 / span 10;
-    grid-row: 2 /span 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     .f-d-row {
         flex-direction: row;
     }
 
-    .items {
-        height: 615px;
-        padding: 50px 100px;
-        gap: 50px;
+    h3 {
+        margin: 25px 0 200px 0;
+        text-align: center;
     }
-
+     
     .pricing-item {
         height: 615px;
         padding: 0 1.5rem;
-        flex: 0 0 370px;
+        flex: 1 1 300px;
+        max-width: 370px;
 
         border-radius: 1rem;
-    }
-
-    h3 {
-        @include desctopH3;
-
-        margin: 25px 0 200px 0;
-        text-align: center;
     }
     
     .bg-sub1 {
@@ -60,6 +41,7 @@
         background-position: center;
         background-size: cover; 
     }
+
     .pricing {
         justify-content: center;
         gap: 16px;
@@ -76,9 +58,8 @@
         font-weight: normal;
         font-size: 32px;
     }
+
     .btn {
-        width: 330px;
-        height: 66px;
         font-family: $roboto;
         font-style: normal;
         font-weight: normal;
@@ -92,6 +73,10 @@
         box-sizing: border-box;
         border-radius: 5px;
     }
+    .padding-30px-115px {
+        padding: 30px 115px;
+    }
+
     .pricing-footer {
         font-family: $roboto;
         font-style: normal;
