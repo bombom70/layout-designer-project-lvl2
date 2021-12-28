@@ -10,12 +10,24 @@
     padding: 0;
     margin: 0;
     color: $w-color;
-}
+} 
 
 .container {
     max-width: $width-content;
     width: 100%;
-    padding: 0 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.p-top-bot-200px {
+    padding: 200px 0;
+}
+
+.mg-top-25px {
+    margin-top: 25px;
+}
+
+.mg-top-bot-45px {
+    margin: 45px 0;
 }
 
 .template-grid {
@@ -26,9 +38,10 @@
 }
 .template-grid-2-2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 .container-app {
     grid-column: 1 / span 2;
@@ -39,18 +52,7 @@
 
     padding-top: 100px;
 }
-.col-2 {
-    grid-column: 1 / span 2;
-}
-.col-1 {
-    grid-column: 1 / span 1;
-}
-.row-1 {
-    grid-row: 1 / span 1;
-}
-.row-2 {
-    grid-row: 2 / span 2;
-}
+
 .grid-container {
     grid-column: 2 / span 10;
     grid-row: 1 /span 3;
@@ -84,19 +86,18 @@
 }
 
 h1 {
+    text-align: center;
     @include desctopH1;
 }
 h2 {
+    text-align: center;
     @include desctopH2;
 }
 h3 {
+    text-align: center;
     @include desctopH3;
 }
 
-.padding-50px-100px {
-    padding: 50px 100px;
-    gap: 50px;
-}
 .gap-50px {
     gap: 50px;
 }
@@ -108,6 +109,7 @@ h3 {
     text-align: center;
     text-transform: uppercase;
     background-color: Transparent;
+    width: 100%;
 
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
@@ -117,7 +119,6 @@ h3 {
 @media (max-width: 414px) {
     .container {
         display: block;
-        padding: 19px;
     }
     h2 {
         font-size: 18px;
@@ -135,38 +136,26 @@ h3 {
         ul {
             display: block;
         }
-        .d-block{
-            display: block;
-        }
         input {
-            width: 95%;
+            width: 100%;
         }
+        padding: 0 20px;
     }
-    .container-section {
+    .main-section {
         h1 {
-            text-align: center;
             @include mobileH1;
         }
         h2 {
-            text-align: center;
             margin-bottom: 16px;
             @include mobileH2;
-        }
-        span {
-            text-align: center;
         }
         input {
             width: 100%;
         }
+        padding: 0 20px;
     }
     .page-pricing {
-        .pricing-item {
-            padding: 0;
-            margin: 0 1.5rem;
-        }
-        .text-footer {
-            width: 100%;
-        }
+        padding: 20px;
     }
     .padding-50px-100px {
         padding: 50px 0;

@@ -7,31 +7,17 @@
     background-size: cover;
 }
 
-main {
-    grid-column: span 12;
-    .container-section {
-        grid-column: 2 / span 10;
-        grid-row: 2 / span 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .span-12 {
-        grid-column: span 12;
-    }
-    .m-botom {
-        margin-bottom: 31px;
-    }
-    span {
+.main-section {
+    p {
         @include desctopText;
-    }
-    .form {
         margin-top: 17px;
-        max-width: 570px;
+        text-align: center;
     }
     form {
         display: flex;
         flex-wrap: wrap;
+        max-width: 570px;
+        margin: 17px auto 0 auto;
         max-width: 570px;
         justify-content: space-between;
         gap: 1.5rem;
@@ -52,7 +38,6 @@ main {
             }
         }
         .btn-form {
-            flex-grow: 1;
             padding: 20px 30px;
             text-transform: uppercase;
             

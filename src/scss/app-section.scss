@@ -2,6 +2,21 @@
 @import './general.scss';
 
 .app-section {
-    padding-top: 100px;
-    // margin-bottom: 100px;
+    padding: 100px 0;
+    h2 {
+        // grid-column: 1 / -1;
+        text-align: center;
+
+    }
+    p {
+        font-family: $roboto;
+        font-size: $f-size-16px;
+        line-height: $f-height-24px;
+    }
+    div {
+        // grid-column: span 2;
+    }
+    img {
+        // grid-column: span 2;
+    }
 }

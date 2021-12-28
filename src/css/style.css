@@ -1,9 +1,7 @@
 header {
   position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin: 25px auto 0 auto;
+  left: 0;
+  right: 0;
   font-family: "Roboto", sans-serif;
   font-size: 11px;
   line-height: 16px;
@@ -60,41 +58,25 @@ header input {
   background-size: cover;
 }
 
-main {
-  grid-column: span 12;
-}
-main .container-section {
-  grid-column: 2/span 10;
-  grid-row: 2/span 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .span-12 {
-  grid-column: span 12;
-}
-main .m-botom {
-  margin-bottom: 31px;
-}
-main span {
+.main-section p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-style: normal;
   font-weight: bold;
-}
-main .form {
   margin-top: 17px;
-  max-width: 570px;
+  text-align: center;
 }
-main form {
+.main-section form {
   display: flex;
   flex-wrap: wrap;
+  max-width: 570px;
+  margin: 17px auto 0 auto;
   max-width: 570px;
   justify-content: space-between;
   gap: 1.5rem;
 }
-main form .input-form {
+.main-section form .input-form {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -109,17 +91,16 @@ main form .input-form {
   background: transparent;
   outline: none;
 }
-main form .input-form[type=text]::-webkit-input-placeholder {
+.main-section form .input-form[type=text]::-webkit-input-placeholder {
   color: #FFFFFF;
 }
-main form .btn-form {
-  flex-grow: 1;
+.main-section form .btn-form {
   padding: 20px 30px;
   text-transform: uppercase;
   background: #34C176;
   border-radius: 5px;
 }
-main .f-column {
+.main-section .f-column {
   flex-direction: column;
 }
 
@@ -127,6 +108,9 @@ main .f-column {
   background: #08020d;
 }
 
+.page-pricing {
+  padding-top: 100px;
+}
 .page-pricing .f-d-row {
   flex-direction: row;
 }
@@ -170,21 +154,13 @@ main .f-column {
   font-weight: normal;
   font-size: 32px;
 }
-.page-pricing .btn {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: Transparent;
-  margin: 40px 22px 60px 22px;
+.page-pricing .btn-pricing {
+  margin-top: 40px;
+  margin-bottom: 64px;
+  padding: 20px 30px;
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 5px;
-}
-.page-pricing .padding-30px-115px {
-  padding: 30px 115px;
 }
 .page-pricing .pricing-footer {
   font-family: "Roboto", sans-serif;
@@ -196,7 +172,6 @@ main .f-column {
   text-align: center;
 }
 .page-pricing .text-footer {
-  width: 1200px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -243,9 +218,16 @@ main .f-column {
 }
 
 .app-section {
-  padding-top: 100px;
+  padding: 100px 0;
 }
-
+.app-section h2 {
+  text-align: center;
+}
+.app-section p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
 * {
   padding: 0;
   margin: 0;
@@ -255,7 +237,20 @@ main .f-column {
 .container {
   max-width: 1200px;
   width: 100%;
-  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.p-top-bot-200px {
+  padding: 200px 0;
+}
+
+.mg-top-25px {
+  margin-top: 25px;
+}
+
+.mg-top-bot-45px {
+  margin: 45px 0;
 }
 
 .template-grid {
@@ -267,9 +262,10 @@ main .f-column {
 
 .template-grid-2-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-app {
@@ -279,22 +275,6 @@ main .f-column {
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-}
-
-.col-2 {
-  grid-column: 1/span 2;
-}
-
-.col-1 {
-  grid-column: 1/span 1;
-}
-
-.row-1 {
-  grid-row: 1/span 1;
-}
-
-.row-2 {
-  grid-row: 2/span 2;
 }
 
 .grid-container {
@@ -331,6 +311,7 @@ main .f-column {
 }
 
 h1 {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 60px;
   line-height: 90px;
@@ -340,6 +321,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 38px;
   line-height: 57px;
@@ -349,17 +331,13 @@ h2 {
 }
 
 h3 {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-style: normal;
   line-height: 1em;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.padding-50px-100px {
-  padding: 50px 100px;
-  gap: 50px;
 }
 
 .gap-50px {
@@ -374,6 +352,7 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   background-color: Transparent;
+  width: 100%;
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 5px;
@@ -382,7 +361,6 @@ h3 {
 @media (max-width: 414px) {
   .container {
     display: block;
-    padding: 19px;
   }
 
   h2 {
@@ -397,6 +375,7 @@ h3 {
 
   .header {
     line-height: 13px;
+    padding: 0 20px;
   }
   .header nav {
     margin: 10px 0 10px 0;
@@ -404,23 +383,21 @@ h3 {
   .header ul {
     display: block;
   }
-  .header .d-block {
-    display: block;
-  }
   .header input {
-    width: 95%;
+    width: 100%;
   }
 
-  .container-section h1 {
-    text-align: center;
+  .main-section {
+    padding: 0 20px;
+  }
+  .main-section h1 {
     font-family: "Roboto", sans-serif;
     font-size: 30px;
     line-height: 45px;
     font-style: normal;
     text-transform: uppercase;
   }
-  .container-section h2 {
-    text-align: center;
+  .main-section h2 {
     margin-bottom: 16px;
     font-family: "Roboto", sans-serif;
     font-size: 18px;
@@ -428,19 +405,12 @@ h3 {
     font-style: normal;
     text-transform: uppercase;
   }
-  .container-section span {
-    text-align: center;
-  }
-  .container-section input {
+  .main-section input {
     width: 100%;
   }
 
-  .page-pricing .pricing-item {
-    padding: 0;
-    margin: 0 1.5rem;
-  }
-  .page-pricing .text-footer {
-    width: 100%;
+  .page-pricing {
+    padding: 20px;
   }
 
   .padding-50px-100px {
