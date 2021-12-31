@@ -1,0 +1,65 @@
+@import './variables.scss';
+@import './general.scss';
+
+.footer-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: 40px;
+
+    padding: 3rem 0 2rem 0;
+
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+        font-style: normal;
+        font-weight: $f-weight-bold;
+
+        text-transform: uppercase;
+        text-align: start;
+    }
+
+    a {
+        font-family: $roboto;
+        font-size: $f-size-16px;
+        line-height: $f-height-24px;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .grid-nav {
+        display: flex;
+        gap: 16px;
+    }
+
+    li {
+        list-style-type: none;  
+    }
+    
+    a {
+        text-decoration: none;
+    }
+
+    nav {
+        grid-column: 1 / -1;
+    }
+
+    .grid-item {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 15px;
+    }
+
+    nav {
+        padding: 40px 0;
+        border-top: 1px solid #CACACA;
+        box-sizing: border-box;
+    }
+
+    .icons-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 26px);
+        gap: 24px;
+    }
+
+}

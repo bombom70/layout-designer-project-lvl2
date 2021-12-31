@@ -2,21 +2,40 @@
 @import './general.scss';
 
 .app-section {
+    .app-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 50px;
+    }
+
     padding: 100px 0;
     h2 {
-        // grid-column: 1 / -1;
         text-align: center;
-
     }
     p {
         font-family: $roboto;
         font-size: $f-size-16px;
         line-height: $f-height-24px;
-    }
-    div {
-        // grid-column: span 2;
+        color: $gray-color;
     }
     img {
-        // grid-column: span 2;
+        margin: 0 auto;
+    }
+    .btn {
+        width: auto;
+        background: #95390C;
+        border-radius: 32px;
+        padding: 16px 40px;
+        text-transform: none;
+
+        font-size: 12.8px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding-top: 20px;
     }
 }
