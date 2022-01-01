@@ -82,3 +82,29 @@ $f-arial: Arial;
     $f-weight-bold: bold;
     text-transform: uppercase;
 }
+
+@mixin bg-baner($url) {
+    height: 750px;
+
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 25px 50px;
+
+    h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 25px;
+
+        text-align: start;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}

@@ -1,13 +1,7 @@
 @import './variables.scss';
-.bg-banner {
-    height: 750px;
-
-    background-image: url('../images/banner.png');
-    background-position: center;
-    background-size: cover;
-}
 
 .main-section {
+    @include bg-baner('../images/banner.png');
     p {
         @include desctopText;
         margin-top: 17px;

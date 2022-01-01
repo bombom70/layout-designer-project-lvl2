@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+.page-similar {
+    @include grid;
+
+    padding: 100px 0;
+
+    h4 {
+        text-align: center;
+    }
+    
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+
+        text-align: center;
+
+        color: #E0E0E0;
+    };
+}
