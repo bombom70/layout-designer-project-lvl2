@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .page-discography {
     @include grid;
@@ -8,7 +8,6 @@
         font-size: $f-size-18px;
         line-height: 27px;
         font-style: normal;
-        line-height: bold;
         text-transform: uppercase;
     }
 }
