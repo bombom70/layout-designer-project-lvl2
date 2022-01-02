@@ -1,6 +1,12 @@
-check html:
+html:
 	./node_modules/.bin/htmlhint ./src/index.html
 	./node_modules/.bin/htmlhint ./src/artist.html
 
-check scss :
+scss :
 	npx stylelint "**/*.scss"
+
+convert:
+	sass src/scss/app.scss src/css/style.css
+
+deploy:
+	npx surge ./src/
