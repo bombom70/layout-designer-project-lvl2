@@ -475,9 +475,14 @@ header input {
 
 .container {
   max-width: 1200px;
+  min-width: 414px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+section {
+  min-width: 414px;
 }
 
 .bg-dark {
